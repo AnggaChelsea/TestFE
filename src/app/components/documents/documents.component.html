@@ -50,9 +50,9 @@
            </div>
           </div>
         </div>
-      <div class="col-md-3"><h2>Channels</h2> &nbsp; <small> Browser all chanel </small>
+      <div class="col-md-3"><h2>Channels</h2><small> Browser all chanel </small>
        <div class="border h-2 bg-dark"></div>
-        <div class="mt-4 mat-tab-link-container" *ngFor="let people of datavideo; let i=index" >
+        <div class=" mat-tab-link-container" *ngFor="let people of datavideo; let i=index" >
          <div class="data" *ngIf="i<5">
           <video width="50%" height="120px" controls>
             <source src="movie.mp4" type="video/mp4">
@@ -70,7 +70,5 @@
         </div>
         
       </div>
-     <div class="people" style="margin-top: -10;">
-       <app-peoplevideo></app-peoplevideo>
-     </div>
+    
     </div>
