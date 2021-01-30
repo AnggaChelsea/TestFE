@@ -2,3 +2,7 @@
   border:solid 1px #aaa;
   border-right-width: 25px !important;
 }
+.hvrbox .hvrbox-layer_image {
+  padding: 0px;
+  background: transparent none repeat scroll 0% 0%;
+}
