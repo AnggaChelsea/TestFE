@@ -6,16 +6,18 @@ import { VideoService } from '../../services/video.service'
   styleUrls: ['./peoplevideo.component.css']
 })
 export class PeoplevideoComponent implements OnInit {
-  data:any;
+  datavideo:any;
+
   constructor(private videoService:VideoService) { }
 
   ngOnInit(): void {
-    this.getData();
+    this.getvideo();
   }
-  getData(){
-    return this.videoService.readAll().subscribe(data =>{
-      this.data = data.list;
-      console.log(this.data);
+
+  getvideo(){
+    return this.videoService.readAll().subscribe(data => {
+      this.datavideo = data.list;
+      console.log(this.datavideo);
     })
   }
 

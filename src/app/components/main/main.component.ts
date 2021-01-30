@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { VideoService } from '../../services/video.service'
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -20,6 +21,7 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.getvideo();
   }
   getvideo(){

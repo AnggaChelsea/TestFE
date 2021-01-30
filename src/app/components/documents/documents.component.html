@@ -4,7 +4,7 @@
     <div class="row show-grid ">
  
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-        <h2>Video </h2>
+        <h3>People</h3>
         <div class="mt-2">
           <div class="headofvideo" *ngFor="let people of datavideo; let i=index">
             <div class="data" *ngIf="i<1">
@@ -33,7 +33,7 @@
         </div>
  
       <div class="col-md-3 ">
-        Browser Video
+        <small>View all</small>
         <div class="mt-4">
           <video width="100%" height="180px" controls>
              <source src="movie.mp4" type="video/mp4">
@@ -50,20 +50,27 @@
            </div>
           </div>
         </div>
-      <div class="col-md-3">Activity &nbsp; <small> View / Filter activities </small>
+      <div class="col-md-3"><h2>Channels</h2> &nbsp; <small> Browser all chanel </small>
        <div class="border h-2 bg-dark"></div>
         <div class="mt-4 mat-tab-link-container" *ngFor="let people of datavideo; let i=index" >
-         <div class="data" *ngIf="i<6">
-          <video width="55%" height="70px" controls>
+         <div class="data" *ngIf="i<5">
+          <video width="50%" height="120px" controls>
             <source src="movie.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
-          Your browser does not support the video tag.
+          {{people.tournamentName}}
           </video>
-          <span class="position-absolute ml-2">{{people.tournamentName}} <br>{{people.tournamentType}} <br>
-         <i class="fa fa-viadeo-square"></i><small>{{people.tournamentStart | date }}</small>
+          <span class="position-absolute ml-2">
+            <video width="95%" height="120px" controls>
+              <source src="movie.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+                {{people.tournamentName}}
+            </video>
          </span>
         </div>
         </div>
+        
       </div>
-      
+     <div class="people" style="margin-top: -10;">
+       <app-peoplevideo></app-peoplevideo>
+     </div>
     </div>
