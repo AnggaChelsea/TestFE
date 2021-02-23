@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAddress: 'https://radiant-reef-49263.herokuapp.com/',
+  urlAddress: './src/app/helper/fakedata.json',
 };
 
 /*

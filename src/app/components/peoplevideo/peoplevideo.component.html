@@ -1,71 +1,44 @@
-<div class="container">
-  
-  <div class="row show-grid ">
+<div class="contentAllCards" >
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-      <h3>Documents</h3>
-      <div class="mt-2">
-        <div class="headofvideo" *ngFor="let people of datavideo; let i=index">
-          <div class="data" *ngIf="i<1">
-            <video width="100%" height="365" controls>
-              <source src="movie.mp4" type="video/mp4">
-              <source src="movie.ogg" type="video/ogg">
-               {{people.tournamentName}}
-            </video>
-           
-            <br>
-          </div>
+    <div class="subject">
+        <div class="title">
+            <h1>
+                People
+            </h1>
         </div>
-        
-          <video width="50%" height="190px" controls>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-          Your browser does not support the video tag.
-          </video>
-    
-          <video class="" width="50%" height="190px" controls>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-          Your browser does not support the video tag.
-          </video>
-       </div>
-      </div>
-
-    <div class="col-md-3 ">
-      <small><a href="">Browser all documents</a></small>
-      <div class="mt-4">
-        <video width="100%" height="180px" controls>
-           <source src="movie.mp4" type="video/mp4">
-           <source src="movie.ogg" type="video/ogg">
-         Your browser does not support the video tag.
-         </video> <br>
-         <video width="100%" height="180px" controls>
-           <source src="movie.mp4" type="video/mp4">
-           <source src="movie.ogg" type="video/ogg">
-         Your browser does not support the video tag.
-         </video><br>
-         <div class="border h-100% ">
-           <button style="width: 100%; height: 190px; background:transparent;"><i class="fa fa-arrow-circle-up"></i> Upload your video</button>
-         </div>
+        <div class="feature">
+            <a href="">
+                View all
+            </a>
         </div>
-      </div>
-    <div class="col-md-3">
-     
-      <div class=" mat-tab-link-container" *ngFor="let people of datavideo; let i=index" >
-       <div class="data" *ngIf="i<2">
-        <video width="50%" height="120px" controls>
-          <source src="movie.mp4" type="video/mp4">
-          <source src="movie.ogg" type="video/ogg">
-        {{people.tournamentName}}
-        </video>
-        <span class="position-absolute ml-2">
-          <video width="95%" height="120px" controls>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-              {{people.tournamentName}}
-          </video>
-       </span>
-      </div>
-      </div>
     </div>
+
+  <div class="cards ">
+
+      <div class="bigCard" style="background-image: url(https://www.nps.gov/glac/planyourvisit/images/hiking-with-ranger-2to1.jpg);">
+          <div class="fileInfo">
+              <div class="fileTitle">
+                  Hiking Together
+              </div>
+              <div class="uploader">Gunung Cimarinjung</div>
+          </div>
+
+          <div class="view">128k views</div>
+      </div>
+
+      <div class="card1 " style="background-image: url({{content.image}});" *ngFor="let content of items |  slice:0:4">
+          <div class="cardContainer">
+              <div class="uploader">{{content.name |lowercase}}</div>
+              <div class="view"> {{content.viwers|number}} views</div>
+          </div>
+      </div>
+
+      <div class="uploadCard">
+          <button class="uploadButton" >
+              <span class="uploadLogo "><i class="fa fa-upload"></i></span>
+              <p>Upload your own video</p>
+              <input type="file" id="myfile" style="display: none;" name="myfile">
+          </button>
+      </div>
   </div>
+</div>

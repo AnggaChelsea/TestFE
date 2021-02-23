@@ -11,6 +11,8 @@ import { VideoService } from './services/video.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DocumentsComponent } from './components/documents/documents.component';
+import { SidebarmenuComponent } from './components/sidebarmenu/sidebarmenu.component';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,8 @@ import { DocumentsComponent } from './components/documents/documents.component';
     MainComponent,
     PeoplevideoComponent,
     DocumentsComponent,
+    SidebarmenuComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

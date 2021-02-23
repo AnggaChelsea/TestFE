@@ -16,9 +16,7 @@ export class VideoService {
 
 
   readAll(): Observable<any> {
-    return this.http.get<any>(
-      `${environment.urlAddress}user/tournaments`
-    )
-  }
+    return this.http.get<any>('src/app/helper/fakedata')
+    }
 
 }
