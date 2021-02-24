@@ -48,6 +48,12 @@
   margin-left:-60px;
   border-radius: 3px;
   display:none;
+  cursor: pointer;
+}
+.addButton button{
+  border:none;
+  cursor: pointer;
+  background: transparent;
 }
 
 
@@ -76,7 +82,6 @@
 .content {
   display: flex;
   flex-direction: row;
-  /* width: 40rem; */
   height: 16%;
 }
 .contents:hover .btnClose{

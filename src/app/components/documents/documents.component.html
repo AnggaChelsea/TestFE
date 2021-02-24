@@ -1,6 +1,6 @@
 <div class="contentAllCards" >
 
-    <div class="subject">
+    <div class="subject"  style="color:white;">
         <div class="title">
             <h1>
                 Documents
@@ -13,10 +13,10 @@
         </div>
     </div>
   
-    <div class="cards ">
+    <div class="cards" style="color:white;">
         <div class="bigCard" style="background-image: url(https://images.unsplash.com/photo-1551632811-561732d1e306?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aGlraW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80);">
             <div class="fileInfo">
-                <div class="fileTitle">
+                <div class="fileTitle" style="color:white;">
                     Hiking Alone
                 </div>
                 <div class="uploader">Gunung Gede</div>
@@ -25,17 +25,17 @@
             <div class="view">128k views</div>
         </div>
   
-        <div class="card1 " style="background-image: url({{content.image}});" *ngFor="let content of items |  slice:0:4">
+        <div class="card1 " style="color:white; background-image: url({{content.image}});" *ngFor="let content of items |  slice:0:4">
             <div class="cardContainer">
-                <div class="uploader">{{content.name |lowercase}}</div>
-                <div class="view"> {{content.viwers|number}} views</div>
+                <div class="uploader">{{content.name }}</div>
+                <div class="view"> {{content.viwers}} views</div>
             </div>
         </div>
   
         <div class="uploadCard">
             <button class="uploadButton" >
-                <span class="uploadLogo "><i class="fa fa-upload"></i></span>
-                <p>Upload your own video</p>
+                <span class="uploadLogo"  style="color:white;"><i class="fa fa-upload"></i></span>
+                <p  style="color:white;">Upload your own video</p>
                 <input type="file" id="myfile" style="display: none;" name="myfile">
             </button>
         </div>

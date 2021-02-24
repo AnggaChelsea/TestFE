@@ -3,7 +3,7 @@
 }
 .contentAllCards {
   width: 40rem;
-  
+  color: var(--color);
   position: relative;
   margin-bottom: 4em;
   border-radius:2px;
@@ -15,6 +15,7 @@
   justify-content: space-between;
   align-items: baseline;
   width: 26.3em;
+  color: var(--color);
 }
 
 .feature a {
@@ -24,7 +25,7 @@
 }
 
 .feature a:hover {
-  color: var(--color)00;
+  color: var(--color);
 }
 
 .title h1 {
