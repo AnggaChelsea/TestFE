@@ -1,5 +1,4 @@
 .sidebar {
- 
   margin-bottom: 7em;
 }
 .subject {
@@ -15,6 +14,34 @@
   text-decoration: none;
   color: #f4e3cf;
 }
+
+.btnClose{
+  border: solid 2px rgb(202, 188, 188);
+  margin: auto;
+  height: 75px;
+  position: absolute;
+  margin-top:-10px;
+  margin:-10px;
+  width:25%;
+  display:none;
+  border-radius: 3px;
+}
+.btnClose .xClose{
+ float: right;
+ margin-left: -12px;
+}
+.btnClose .xClose img{
+  position: relative;
+  margin: -3px;
+  left: 5px;
+ }
+.btnClose button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left:10px;
+}
+
 
 .feature a:hover {
   color: #aa9b8a00;
@@ -43,6 +70,9 @@
   flex-direction: row;
   /* width: 40rem; */
   height: 16%;
+}
+.contents:hover .btnClose{
+  display: block;
 }
 
 .material {

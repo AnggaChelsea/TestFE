@@ -14,24 +14,24 @@
   <hr>
 
   <div class="contents" *ngFor="let activity of items |  slice:0:6">
-
       <div  class="content">
-         <div class="material" style="background-image: url({{activity.image|lowercase}});"></div>
+          <div class="buttonClose"></div>
+         <div class="material" style="background-image: url({{activity.image}});"></div>
           <div class="article">
               <div class="mainActivity">
-                  <p class="Username"> <b>{{activity.name|lowercase}}</b> </p>
+                  <p class="Username"> <b>{{activity.name}}</b> </p>
                   <p class="doingSomething">{{activity.viwers}}</p>
               </div>
               <p class="Comment">title</p>
               <div class="timeline">
                   <span class="timeLogo material-icons">
-                      logo
+                      <i class="{{activity.logo}}"></i>
                   </span>
-                  <p>time</p>
+                  <p>{{activity.time}}</p>
               </div>
           </div> 
       </div>
-
+      <div class="btnClose"><button class="xClose" (click)="Close()" ><img src="../../../assets/icon/xclose.png" width="180" alt=""></button></div>
   </div>
   <hr>
 </div>
@@ -52,10 +52,12 @@
   <hr>
 
   <div class="contentsBottom" >
-
-      <div class="contentBottom" style="background-image: url({{channel.image|lowercase}});" *ngFor="let channel of items |  slice:0:10 ">
+      <div class="contentBottom" style="background-image: url({{channel.image}});" *ngFor="let channel of items |  slice:0:10 ">
           <div class="plusLogo"></div>
-          <h3>{{channel.name|lowercase}}</h3>
+          <h3>{{channel.name}}</h3>
+          <div class="addButton">
+              <button class="add">+</button>
+          </div>
       </div>
      
   </div>

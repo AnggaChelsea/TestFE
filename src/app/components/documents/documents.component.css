@@ -1,3 +1,6 @@
+:root{
+  --color : #f4e3cf;
+}
 .contentAllCards {
   width: 40rem;
   
@@ -17,16 +20,16 @@
 .feature a {
   font-size: 0.8em;
   text-decoration: none;
-  color: #f4e3cf;
+  color: var(--color);
 }
 
 .feature a:hover {
-  color: #aa9b8a00;
+  color: var(--color)00;
 }
 
 .title h1 {
   font-size: 1.5em;
-  color: #f4e3cf;
+  color: var(--color);
 }
 
 .card1 {
@@ -88,18 +91,18 @@
 .fileTitle {
   font-size: 1rem;
   font-weight: 500;
-  color: #f4e3cf;
+  color: var(--color);
   background: none;
 }
 .uploader {
   font-size: 0.8rem;
-  color: #f4e3cf;
+  color: var(--color);
   background: none;
 }
 
 .view {
   font-size: 0.6rem;
-  color: #f4e3cf;
+  color: var(--color);
   align-self: flex-end;
   position: relative;
   background: none;
@@ -120,13 +123,13 @@
 .uploadLogo {
   background: transparent;
   margin-right: 0.5em;
-  color: #f4e3cf;
+  color: var(--color);
 }
 
 .uploadButton p {
   margin-top: 1em;
   background: transparent;
-  color: #f4e3cf;
+  color: var(--color);
   font-size: 0.8rem;
   max-width: 7em;
 }

@@ -23,7 +23,7 @@ hr {
 .box {
   height: 2rem;
   width: 2rem;
-  background-color: #f4e3cf;
+  background:white;
   border-radius: 3px;
   position: relative;
   margin-right: 0.5em;
@@ -34,9 +34,10 @@ hr {
   box-shadow: 1.5px 1.5px #817e78;
 }
 
-.socialMedia img {
+.socialMedia {
   height: 1rem;
   background-color: transparent;
+  color:white;
   z-index: 1;
 }
 
