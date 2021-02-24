@@ -42,6 +42,14 @@
   margin-left:10px;
 }
 
+.addButton img{
+  position: absolute;
+  margin-top:-114px;
+  margin-left:-60px;
+  border-radius: 3px;
+  display:none;
+}
+
 
 .feature a:hover {
   color: #aa9b8a00;
@@ -166,9 +174,10 @@
   border-radius: 3%;
 }
 
-.contentBottom:hover {
+.contentBottom:hover .addButton img {
   filter: grayscale(100%);
   transition-delay: 0.15s;
+  display: block;
 }
 
 .contentBottom h3 {
