@@ -4,10 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainComponent } from './components/main/main.component';
 import { PeoplevideoComponent } from './components/peoplevideo/peoplevideo.component';
-import { VideoService } from './services/video.service';
+
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DocumentsComponent } from './components/documents/documents.component';
@@ -18,7 +17,6 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavbarComponent,
     MainComponent,
     PeoplevideoComponent,
     DocumentsComponent,
@@ -32,7 +30,7 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [VideoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

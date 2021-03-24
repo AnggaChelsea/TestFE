@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoService } from '../../services/video.service'
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http'
 
@@ -40,7 +39,7 @@ export class MainComponent implements OnInit {
       name: 'The World',
       viwers: 500,
       addedToCart: false,
-      image: 'https://i1.wp.com/crowfootmedia.com/wp-content/uploads/2016/06/castle-1.jpg?resize=620%2C413&ssl=1',
+      image: 'https://www.incimages.com/uploaded_files/image/1920x1080/getty_1141196125_411306.jpg',
       desc: `The World is the Stand of DIO. The World shows no particular personality,
       although it occasionally smiles as it pummels others,
       hinting that it may be a rather cruel entity that takes pleasure in causing pain.
@@ -87,7 +86,7 @@ export class MainComponent implements OnInit {
   public showNotification: boolean;
 
   datavideo: any;
-  constructor(private videoService:VideoService, private breakpointObserver: BreakpointObserver, private http:HttpClient) 
+  constructor(private breakpointObserver: BreakpointObserver, private http:HttpClient) 
   { 
     this.showNotification = true;
   }

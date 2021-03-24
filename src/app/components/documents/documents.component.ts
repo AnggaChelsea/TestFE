@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoService } from '../../services/video.service'
+
 
 interface Item {
   name: string;
@@ -76,17 +76,17 @@ export class DocumentsComponent implements OnInit {
   ];
 
 
-  constructor(private videoService:VideoService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getvideo();
+    // this.getvideo();
   }
 
-  getvideo(){
-    return this.videoService.readAll().subscribe(data => {
-      this.datavideo = data.list;
-      console.log(this.datavideo);
-    })
-  }
+  // getvideo(){
+  //   return this.videoService.readAll().subscribe(data => {
+  //     this.datavideo = data.list;
+  //     console.log(this.datavideo);
+  //   })
+  // }
 
 }

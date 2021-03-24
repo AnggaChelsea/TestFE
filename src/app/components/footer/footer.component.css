@@ -43,12 +43,20 @@ hr {
 
 .breadcrumb {
   margin: 1.5em 0 2em 2.5%;
+  background-color: transparent;
+  color:white;
 }
 
-.breadcrumb li a {
-  color: #953e46;
+.breadcrumb li a .fa {
+  color:#953e46;
   text-decoration: none;
   font-size: 0.8rem;
+}
+a{
+  color:white;
+}
+.fa{
+  color: #953e46;
 }
 
 footer p {

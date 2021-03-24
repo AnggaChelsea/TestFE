@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoService } from '../../services/video.service'
+
 
 interface Item {
   name: string;
@@ -17,7 +17,7 @@ interface Item {
 export class PeoplevideoComponent implements OnInit {
   datavideo:any;
 
-  constructor(private videoService:VideoService) { }
+  constructor() { }
   items: Item[] = [
     {
       name: 'Kokorowatari',
@@ -77,14 +77,8 @@ export class PeoplevideoComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.getvideo();
+    
   }
 
-  getvideo(){
-    return this.videoService.readAll().subscribe(data => {
-      this.datavideo = data.list;
-      console.log(this.datavideo);
-    })
-  }
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router'
 
 interface Item {
+  id:number,
   name: string;
   image: string;
   viwers: number;
@@ -16,8 +18,10 @@ interface Item {
   styleUrls: ['./sidebarmenu.component.css']
 })
 export class SidebarmenuComponent implements OnInit {
+  videos:any;
   items: Item[] = [
     {
+      id:1,
       name: 'Kokorowatari',
       image: 'https://linisehat.com/wp-content/uploads/2020/12/hiking.jpg',
       viwers: 444,
@@ -29,6 +33,7 @@ export class SidebarmenuComponent implements OnInit {
         The sword belonged to a powerful  Kiss-Shot Acerola-Orion Heart-Under-Blade.`
     },
     {
+      id:2,
       name: 'Star Platinum',
       image: 'https://lifeexperiencedegreepros.com/wp-content/uploads/2019/01/Best-Holidays-For-Families-in-Africa.jpg',
       viwers: 555,
@@ -41,6 +46,7 @@ export class SidebarmenuComponent implements OnInit {
     },
 
     {
+      id:3,
       name: '3D Maneuver Gear',
       viwers: 200,
       addedToCart: false,
@@ -52,6 +58,7 @@ export class SidebarmenuComponent implements OnInit {
       The equipment itself takes the form of a body harness that encompasses much of the body below the neck.`
     },
     {
+      id:4,
       name: 'Excalibur',
       viwers: 300,
       addedToCart: false,
@@ -63,6 +70,7 @@ export class SidebarmenuComponent implements OnInit {
       it is her greatest and most powerful Noble Phantasm.`
     },
     {
+      id:5,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -74,6 +82,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:6,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -85,6 +94,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:7,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -96,6 +106,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:8,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -107,6 +118,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:9,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -118,6 +130,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:10,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -129,6 +142,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:11,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -140,6 +154,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:12,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -151,6 +166,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:14,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -162,6 +178,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:15,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -173,6 +190,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:16,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -184,6 +202,7 @@ export class SidebarmenuComponent implements OnInit {
       The Dragon Slayer is the massive sword Guts has wielded as his signature weapon since surviving the Eclipse.`
     },
     {
+      id:17,
       name: 'Dragon Slayer',
       viwers: 450,
       addedToCart: false,
@@ -196,15 +215,21 @@ export class SidebarmenuComponent implements OnInit {
     },
   ];
 
-  buttonClose:boolean = true;
+  buttonClose!:boolean;
 
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.videos = this.getDataId(+this.route.snapshot.params['id'])
+    console.log(this.videos)
   }
 
   Close(){
     this.buttonClose = false
+  }
+
+  getDataId(id:number){
+    return this.items.findIndex(x => x.id === id)
   }
 
 }
