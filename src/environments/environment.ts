@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlAddress: './src/app/helper/fakedata.json',
+  urlAddress: 'https://radiant-bayou-53976.herokuapp.com/',
 };
 
 /*
