@@ -1,4 +1,10 @@
-# Protofolio
+# StackBlitz
+https://stackblitz.com/github/AnggaChelsea/TestFE
+
+# Demo
+https://test-fe-git-main-muhidabdul168.vercel.app/
+
+# Slicing page
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
 
