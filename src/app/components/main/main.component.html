@@ -25,10 +25,10 @@
           <div class="view">128k views</div>
       </div>
 
-      <div class="card1 " style="background-image: url({{content.image}});" *ngFor="let content of items |  slice:0:4">
+      <div class="card1 " style="background-image: url(https://images.unsplash.com/photo-1551632811-561732d1e306?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aGlraW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80);" *ngFor="let content of dataVideo ">
           <div class="cardContainer">
               <div class="uploader">{{content.name |lowercase}}</div>
-              <div class="view"> {{content.viwers|number}} views</div>
+              <div class="view"> {{content.views|number}} views</div>
           </div>
       </div>
 

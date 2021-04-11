@@ -26,10 +26,10 @@
           <div class="view">128k views</div>
       </div>
 
-      <div class="card1 " style="background-image: url({{content.image}});" *ngFor="let content of items |  slice:0:4">
+      <div class="card1 " style="background-image: url('https://linisehat.com/wp-content/uploads/2020/12/hiking.jpg');" *ngFor="let content of dataVideo ">
           <div class="cardContainer">
               <div class="uploader">{{content.name |lowercase}}</div>
-              <div class="view"> {{content.viwers|number}} views</div>
+              <div class="view"> {{content.views|number}} views</div>
           </div>
       </div>
 
